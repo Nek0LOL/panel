@@ -1,0 +1,3 @@
+mount -t proc proc /chroot/proc
+mount --rbind /sys /chroot/sys
+mount --rbind /dev /chroot/dev
