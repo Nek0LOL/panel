@@ -1,12 +1,5 @@
-pkg update -y ; pkg install wget -y ; wget https://raw.githubusercontent.com/sabamdarif/gnome-in-termux/main/setup.sh ; bash setup.sh 
-
-#!/bin/sh
-
-[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
-[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
-vncconfig -iconic &
-export DESKTOP_SESSION=/usr/share/xsessions/ubuntu.desktop
-export XDG_CURRENT_DESKTOP=ubuntu:GNOME
-export GNOME_SHELL_SESSION_MODE=ubuntu
-export XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
-dbus-launch --exit-with-session /usr/bin/gnome-session --systemd --session=ubuntu
+sudo mount --bind /proc /path/to/chroot/proc
+sudo mount --bind /sys /path/to/chroot/sys
+sudo mount --bind /dev /path/to/chroot/dev
+sudo mount --bind /dev/pts /path/to/chroot/dev/pts
+sudo chroot /path/to/chroot
