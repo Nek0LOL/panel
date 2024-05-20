@@ -1,5 +1,5 @@
-sudo mount --bind /proc /path/to/chroot/proc
-sudo mount --bind /sys /path/to/chroot/sys
-sudo mount --bind /dev /path/to/chroot/dev
-sudo mount --bind /dev/pts /path/to/chroot/dev/pts
-sudo chroot /path/to/chroot
+ mount --bind /proc /path/to/chroot/proc
+ mount --bind /sys /path/to/chroot/sys
+ mount --bind /dev /path/to/chroot/dev
+ mount --bind /dev/pts /path/to/chroot/dev/pts
+ chroot /path/to/chroot
